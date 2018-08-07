@@ -1,0 +1,25 @@
+main {
+	margin: 50px;
+}
+
+.img-fluid {
+	height: 100%;
+	width: 100%;
+}
+
+#wordBlock {
+	height: 200px;
+	width: 100%;
+	background-color: darkgrey;
+	font-size: 72px;
+}
+
+#guessed {
+	height: 100px;
+	background-color:lightgrey;
+	font-size: 68px;
+}
+
+img {
+	height: 150%;
+}
