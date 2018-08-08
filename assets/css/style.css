@@ -8,8 +8,7 @@ main {
 }
 
 #wordBlock {
-	height: 200px;
-	width: 100%;
+	height: 150px;
 	background-color: darkgrey;
 	font-size: 72px;
 }
@@ -20,6 +19,17 @@ main {
 	font-size: 68px;
 }
 
+#remaining {
+	height: 100px;
+	background-color:lightgrey;
+	font-size: 68px;
+}
+#wins {
+	height: 100px;
+	background-color:lightgrey;
+	font-size: 68px;
+}
+
 img {
-	height: 150%;
+	height: 100%;
 }
