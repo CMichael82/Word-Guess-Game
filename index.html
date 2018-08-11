@@ -12,27 +12,34 @@
 
 <header class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<h1 class="text-center">Hangman</h1>
-			<h2 class="text-center">Dem Bones!</h2>
+		<div class="col-md-12 title">
+			<h1 class="title text-center">Dem Bones! Hangman</h1>
+			<h3 class="text-center">Press any key to get started!</h3>
 		</div>
 	</header>
 
 	<main class="container">
-	<div class="row">
-		<div class="col-md-5">
-			<img src="./assets/images/skeleton.jpg" alt="Skeleton" class="img-fluid">
-		</div>
-		<div class="col-md-7">
-			<p>Press any key to get started!</p>
-			<div id="wordBlock" class ="text-center"></div>
-			<p>Letters already Guessed:</p>
-			<div id="guessed" class="text-center"></div>
-			<p>Number of Guesses Remaining:</p>
-			<div id="remaining" class="text-center"></div>
-			<p>Wins:</p>
-			<div id="wins" class="text-center"></div>
-
+		<div class="row">
+			<div class="col-md-7">
+				<img src="./assets/images/skeleton-moon-tree.jpg" alt="Skeleton" class="img-fluid" id="skelton">
+			</div>
+			<div class="col-md-5">
+				<div id="wordBlock" class ="text-center"></div>
+				<br>
+				<h4 class="text-center">Letters already Guessed:</h4>
+				<div id="guessed" class="text-center"></div>
+				<div class="row">
+					<col-md-4>
+						<div id="remaining"></div>
+					</col-md-4>
+					<col-md-4>
+						<div id="wins"></div>
+					</col-md-4>
+					<col-md-4>
+						<div id="losses"></div>
+					</col-md-4>
+				</div>
+			</div>
 		</div>
 	</main>
 </div>
