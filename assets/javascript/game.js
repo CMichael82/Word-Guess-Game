@@ -12,6 +12,7 @@ for (var i = 0; i < word.length; i++) {
 
 //Create an empty array for letters already guessed
 var guessedLetters = [];
+document.getElementById("wordBlock").innerHTML = letterSpaces.join("");
 
 //Determine the length of the random word 
 var lettersRemaining = word.length;
@@ -21,19 +22,16 @@ var guessesLeft = 10;
 
 //Set wins starting at 0
 var wins = 0;
-var winMessage = "You Win!"
 var losses = 0;
-var lossMessage = "Try Again!"
 
-document.getElementById("wordBlock").innerHTML = letterSpaces.join("");
 //Start game with press(up)of any key
 document.onkeyup = function (event) {
-
+	
 	//Set the user guess to the key selected
 	var userGuess = event.key;
 	console.log(userGuess);
 	console.log(word);
-
+	
 	// If the user guess is in the word, replace space with letter, reduce letters remaining,
 	if (word.indexOf(userGuess) > -1) {
 		for (var j = 0; j < 26; j++) {
@@ -49,22 +47,25 @@ document.onkeyup = function (event) {
 		guessesLeft--;
 		console.log(guessesLeft);
 	}
-
+	
 	checkWin();
 	checkLoss();
-
+	
 	//Display stats in html
 	document.getElementById("wordBlock").innerHTML = letterSpaces.join("");
 	document.getElementById("guessed").innerHTML = guessedLetters.join("");
 	document.getElementById("remaining").innerHTML = "Guesses Remaining:  " + guessesLeft;
 	document.getElementById("wins").innerHTML = "Wins:  " + wins;
 	document.getElementById("losses").innerHTML ="Losses:  " + losses;
-}
+
+};
 
 //functions
 function checkWin() {
 	if (lettersRemaining === 0) {
 		wins++;
+		console.log(wins);
+		winImage();
 		resetGame();
 	}
 }
@@ -72,7 +73,8 @@ function checkWin() {
 function checkLoss() {
 	if (guessesLeft === 0) {
 		losses++;
-		// document.getElementById("skeleton").innerHTML= lossMessage;
+		console.log (losses);
+		loseImage();
 		resetGame();
 	}
 }
@@ -88,4 +90,11 @@ function resetGame() {
 	guessesLeft = 10;
 }
 
+function winImage() {
+	document.getElementById("skeleton").src = "assets/images/skeleton-dancing.webp";
+}
+
+function loseImage(){
+	document.getElementById("skeleton").src = "assets/images/skeleton-kneeling.png";
+}
 
