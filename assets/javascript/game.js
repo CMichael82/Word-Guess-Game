@@ -1,5 +1,5 @@
 //Create an array of available words
-var wordBank = ["fibula", "elbow", "clavicle", "cranium", "femur", "vertebra", "mandible"];
+var wordBank = ["fibula", "elbow", "clavicle", "cranium", "femur", "vertebra", "mandible", "phalanges"];
 
 //Pick a random word from the arrray
 var word = wordBank[Math.floor(Math.random() * wordBank.length)];
@@ -26,12 +26,12 @@ var losses = 0;
 
 //Start game with press(up)of any key
 document.onkeyup = function (event) {
-	
+
 	//Set the user guess to the key selected
 	var userGuess = event.key;
 	console.log(userGuess);
 	console.log(word);
-	
+
 	// If the user guess is in the word, replace space with letter, reduce letters remaining,
 	if (word.indexOf(userGuess) > -1) {
 		for (var j = 0; j < 26; j++) {
@@ -47,16 +47,16 @@ document.onkeyup = function (event) {
 		guessesLeft--;
 		console.log(guessesLeft);
 	}
-	
+
 	checkWin();
 	checkLoss();
-	
+
 	//Display stats in html
 	document.getElementById("wordBlock").innerHTML = letterSpaces.join("");
 	document.getElementById("guessed").innerHTML = guessedLetters.join("");
 	document.getElementById("remaining").innerHTML = "Guesses Remaining:  " + guessesLeft;
 	document.getElementById("wins").innerHTML = "Wins:  " + wins;
-	document.getElementById("losses").innerHTML ="Losses:  " + losses;
+	document.getElementById("losses").innerHTML = "Losses:  " + losses;
 
 };
 
@@ -73,7 +73,7 @@ function checkWin() {
 function checkLoss() {
 	if (guessesLeft === 0) {
 		losses++;
-		console.log (losses);
+		console.log(losses);
 		loseImage();
 		resetGame();
 	}
@@ -91,10 +91,10 @@ function resetGame() {
 }
 
 function winImage() {
-	document.getElementById("skeleton").src = "assets/images/skeleton-dancing.webp";
+	document.getElementById("skeleton").src = "assets/images/skeleton-happy.jpg";
 }
 
-function loseImage(){
+function loseImage() {
 	document.getElementById("skeleton").src = "assets/images/skeleton-kneeling.png";
 }
 
