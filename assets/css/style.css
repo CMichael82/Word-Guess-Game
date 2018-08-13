@@ -2,8 +2,8 @@
 
 body {
 	background-color: black;
-	font-family: 'Gloria Hallelujah', cursive;
 	color: white;
+	font-family: 'Gloria Hallelujah', cursive;
 	}
 	
 main {
@@ -18,22 +18,22 @@ h3 {
 	margin-top: 30px;
 }
 
-.btn {
+/* .btn {
 	margin-left: 220px;
-	/* display: none; */
-}
+	display: none;
+} */
 
 #wordBlock {
-	font-size: 64px;
 	color: white;
+	font-size: 64px;
 	margin-bottom: 30px;
 }
 
 #guessed {
-	height: 75px;
 	background-color: rgb(253, 253, 131);
-	font-size: 36px;
 	color: black;
+	font-size: 36px;
+	height: 75px;
 	margin-bottom: 30px;
 	margin-top: 30px;
 	width: 100%;
@@ -45,15 +45,14 @@ h3 {
 	margin: 20px;
 }
 #wins {
-	font-size: 24px;
 	color: yellow;
+	font-size: 24px;
 	margin: 20px;
 }
 
 #losses {
-	font-size: 24px;
 	color:yellow;
+	font-size: 24px;
 	margin: 20px;
-
 }
 
