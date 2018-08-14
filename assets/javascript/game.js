@@ -66,7 +66,6 @@ function checkWin() {
 		wins++;
 		console.log(wins);
 		winImage();
-		resetGame();
 	}
 }
 
@@ -75,7 +74,6 @@ function checkLoss() {
 		losses++;
 		console.log(losses);
 		loseImage();
-		resetGame();
 	}
 }
 
@@ -88,6 +86,12 @@ function resetGame() {
 	lettersRemaining = word.length;
 	guessedLetters = [];
 	guessesLeft = 10;
+	document.getElementById("skeleton").src = "assets/images/skeleton-moon-tree.jpg";
+	document.getElementById("wordBlock").innerHTML = letterSpaces.join("");
+	document.getElementById("guessed").innerHTML = guessedLetters.join("");
+	document.getElementById("remaining").innerHTML = "Guesses Remaining:  " + guessesLeft;
+	document.getElementById("wins").innerHTML = "Wins:  " + wins;
+	document.getElementById("losses").innerHTML = "Losses:  " + losses;
 }
 
 function winImage() {
